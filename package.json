@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/codecooperative/group-project-boilerplate-2020/issues"
   },
-  "homepage": "https://github.com/codecooperative/group-project-boilerplate-2020#readme"
+  "homepage": "https://github.com/codecooperative/group-project-boilerplate-2020#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
 }
