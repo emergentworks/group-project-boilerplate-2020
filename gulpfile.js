@@ -3,13 +3,13 @@ const browserSync = require('browser-sync').create();
 
 browserSync.init({ server: '.' });
 
-gulp.task('watch-html', function() {
-  return gulp.watch('*.html', (done) => {
+gulp.task('watch', function() {
+  return gulp.watch('*.(html|css|js)', (done) => {
       browserSync.reload();
       done();
     })
 });
 
 gulp.task('server', gulp.series([
-  'watch-html',
+  'watch',
 ]));
