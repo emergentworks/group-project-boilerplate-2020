@@ -1,18 +1,15 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync').create();
 
-gulp.task('start-server', () => {
-  browserSync({ server: '.' });
-  browserSync.reload('*.html');
-});
+browserSync.init({ server: '.' });
 
-gulp.task('watch-html', () => {
-  return gulp
-    .src('*.html')
-    .pipe(browserSync.reload('*.html'));
+gulp.task('watch-html', function() {
+  return gulp.watch('*.html', (done) => {
+      browserSync.reload();
+      done();
+    })
 });
 
 gulp.task('server', gulp.series([
-  'start-server',
   'watch-html',
 ]));
