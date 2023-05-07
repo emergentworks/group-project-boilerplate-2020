@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/codecooperative/group-project-boilerplate-2020#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "gulp": "^4.0.2"
   }
 }
